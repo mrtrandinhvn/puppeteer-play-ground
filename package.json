@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "dev" : "node main.js"
+  },
+  "dependencies": {
+    "puppeteer": "^5.1.0"
+  },
+  "license": "MIT"
+}
