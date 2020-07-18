@@ -1,8 +1,9 @@
 {
   "scripts": {
-    "dev" : "node main.js"
+    "dev": "node --trace-warnings main.js"
   },
   "dependencies": {
+    "eslint": "^7.4.0",
     "puppeteer": "^5.1.0"
   },
   "license": "MIT"
