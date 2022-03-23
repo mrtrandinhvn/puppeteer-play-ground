@@ -1,10 +1,14 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 
-const urlToCrawl = 'https://sachtienganhhanoi.com/audio-cambridge-global-english-1-cd-2-2/';
-const downloadFolder = ".\\audio2";
+const urlToCrawl = 'https://sachtienganhhn.net/audio-stream/cambridge-global-english-4-audio-cd-2.html';
+const downloadFolder = `.\\audio\\${urlToCrawl.split('/').pop()}`;
+if (!fs.existsSync(downloadFolder)) {
+    fs.mkdirSync(downloadFolder);
+}
+
 (async () => {
-    console.log("let the fun begin")
+    console.log(`let the fun begin: ${new Date()}`)
     const browser = await puppeteer.launch({
         headless: true,
         devtools: false,
